@@ -36,30 +36,31 @@ function Section({title,discription,backgroundImg,leftBtnText,rightBtnText}){
 export  default Section
 
 const Wrap = styled.div`
-       width: 100vw;
-       height: 100vh;
-       background-size: cover;
-       background-position: center;
-       background-repeat: not-repeat;
-       background-image: url('/images/model-s.jpg');
-       display:flex;
-       flex-direction:column;
-       justify-content: space-between; // vertical bcoz column
-       align-items:center; 
-       background-image: ${props =>  `url("/images/${props.bgImage}")`}
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: not-repeat;
+        background-image: url('/images/model-s.jpg');
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between; // vertical bcoz column
+        align-items:center; 
+        background-image: ${props =>  `url("/images/${props.bgImage}")`}
        
 `
 const ItemText = styled.div`
-padding-top:15vh;
-text-align:center;
+            padding-top:15vh;
+            text-align:center;
 `
 
 const ButtonGroup = styled.div`
-display: flex;
-margin-bottom:30px;
-@media (max-width: 768px){
-    flex-direction: column;
-}
+            display: flex;
+            margin-bottom:30px;
+            @media (max-width: 768px){
+                flex-direction: column;
+            }
 `
 const LeftButton  = styled.div`
             background-color: rgba(23,26,32,0.8);
